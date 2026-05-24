@@ -15,8 +15,6 @@ This is not a tutorial collection. It's a record of **work I actually did, on sy
 
 ## Why Public
 
-Three reasons:
-
 1. **Verifiability.** Anyone evaluating my technical depth can read exact methodology, command sequences, and findings — not just a resume bullet that says "familiar with Wireshark."
 2. **Discipline forcing function.** Knowing my work is public makes me document better, scope cleaner, and avoid shortcuts.
 3. **Resource for others.** If you're on a similar path — self-taught, zero budget — these labs show what's achievable with free tools, authorized targets, and patience.
@@ -33,26 +31,40 @@ This repository contains analytical methodology, redacted findings, and defensiv
 
 ## Lab Index
 
-| Domain | Lab | Date | Status |
-|---|---|---|---|
-| **Wireless** | [WPA2-PSK Handshake Capture & Analysis](./wireless/wpa2-handshake-capture/) | 24 May 2026 | ✅ Complete |
+| Track | Domain | Lab | Date | Status |
+|---|---|---|---|---|
+| 🔴 Offensive | Wireless | [WPA2-PSK Handshake Capture & Analysis](./offensive-security/wireless/wpa2-handshake-capture/) | 24 May 2026 | ✅ Complete |
 
 *This index will grow as new labs are added. Each entry links to a self-contained lab folder with its own README and supporting artifacts.*
 
 ---
 
-## Domain Coverage
+## Track Coverage
 
-The labs are organized by domain. Domains marked with a labs count are active; others are planned and will populate over time.
+Labs are organized by **track** (offensive vs. defensive) and then by **domain** within each track.
+
+### 🔴 [`offensive-security/`](./offensive-security/)
+
+Red-team practice — reconnaissance, exploitation, post-exploitation, attack workflows. Authorized scope only.
 
 | Domain | Description | Labs |
 |---|---|---|
-| **`wireless/`** | 802.11 attacks, monitor-mode capture, handshake analysis, defensive WiFi posture | 1 |
-| **`web/`** | OWASP Top 10 exercises, request manipulation, authentication flaws | *(planned)* |
-| **`network/`** | `nmap` reconnaissance, packet analysis, protocol-level investigation | *(planned)* |
-| **`forensics/`** | Disk imaging, memory analysis, timeline reconstruction, chain-of-custody practice | *(planned)* |
-| **`linux/`** | Privilege escalation, log forensics, persistence detection | *(planned)* |
-| **`windows/`** | Event log analysis, registry forensics, Active Directory basics | *(planned)* |
+| `wireless/` | 802.11 attacks, monitor-mode capture, handshake analysis | 1 |
+| `web/` | OWASP Top 10, authentication flaws, request manipulation | *(planned)* |
+| `network/` | `nmap` reconnaissance, packet analysis | *(planned)* |
+| `linux/` | Privilege escalation, persistence | *(planned)* |
+| `windows/` | Local privesc, AD basics, registry abuse | *(planned)* |
+
+### 🔵 [`defensive-security/`](./defensive-security/) *(planned)*
+
+Blue-team practice — forensics, incident response, detection engineering, SOC workflows, hardening.
+
+| Domain | Description | Labs |
+|---|---|---|
+| `forensics/` | Disk imaging, memory analysis, timeline reconstruction | *(planned)* |
+| `incident-response/` | Triage workflows, evidence collection, chain of custody | *(planned)* |
+| `soc/` | Log analysis, SIEM exercises, detection rules | *(planned)* |
+| `hardening/` | Defensive configuration, network segmentation, posture audits | *(planned)* |
 
 ---
 
@@ -60,18 +72,22 @@ The labs are organized by domain. Domains marked with a labs count are active; o
 
 ~~~
 cybersecurity-labs/
-├── README.md                              # This file
+├── README.md                                  # This file
 ├── LICENSE
-├── wireless/
-│   ├── README.md                          # Wireless domain overview
-│   └── wpa2-handshake-capture/
-│       ├── README.md                      # Lab writeup
-│       └── WPA2_Handshake_Lab_Report.pdf  # Full forensic-style report
-├── web/                                   # planned
-├── network/                               # planned
-├── forensics/                             # planned
-├── linux/                                 # planned
-└── windows/                               # planned
+│
+├── offensive-security/                        # 🔴 Red-team labs
+│   ├── README.md
+│   └── wireless/
+│       ├── README.md
+│       └── wpa2-handshake-capture/
+│           ├── README.md
+│           └── WPA2_Handshake_Lab_Report.pdf
+│
+└── defensive-security/                        # 🔵 Blue-team labs (planned)
+    ├── forensics/
+    ├── incident-response/
+    ├── soc/
+    └── hardening/
 ~~~
 
 ---
