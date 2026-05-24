@@ -7,7 +7,7 @@
 
 ## What This Repository Is
 
-A growing collection of practical cybersecurity labs I've conducted as part of my independent learning alongside formal B.Tech (Cybersecurity Specialization) coursework. Each lab is documented as a complete, standalone artifact: methodology, findings, evidence handling, defensive recommendations, and legal scope.
+A growing collection of practical cybersecurity labs conducted as part of my independent learning alongside formal B.Tech (Cybersecurity Specialization) coursework. Each lab is documented as a complete, standalone artifact: methodology, findings, evidence handling, defensive recommendations, and legal scope.
 
 This is not a tutorial collection. It's a record of **work I actually did, on systems I was authorized to test, with the same rigor I'd apply to a real engagement.**
 
@@ -34,6 +34,7 @@ This repository contains analytical methodology, redacted findings, and defensiv
 | Track | Domain | Lab | Date | Status |
 |---|---|---|---|---|
 | 🔴 Offensive | Wireless | [WPA2-PSK Handshake Capture & Analysis](./offensive-security/wireless/wpa2-handshake-capture/) | 24 May 2026 | ✅ Complete |
+| 🔵 Defensive | Forensics | [Linux Deleted-File Recovery & Anti-Forensics](./defensive-security/forensics/linux-deleted-file-recovery/) | 24 May 2026 | ✅ Complete |
 
 *This index will grow as new labs are added. Each entry links to a self-contained lab folder with its own README and supporting artifacts.*
 
@@ -55,16 +56,16 @@ Red-team practice — reconnaissance, exploitation, post-exploitation, attack wo
 | `linux/` | Privilege escalation, persistence | *(planned)* |
 | `windows/` | Local privesc, AD basics, registry abuse | *(planned)* |
 
-### 🔵 [`defensive-security/`](./defensive-security/) *(planned)*
+### 🔵 [`defensive-security/`](./defensive-security/)
 
 Blue-team practice — forensics, incident response, detection engineering, SOC workflows, hardening.
 
 | Domain | Description | Labs |
 |---|---|---|
-| `forensics/` | Disk imaging, memory analysis, timeline reconstruction | *(planned)* |
-| `incident-response/` | Triage workflows, evidence collection, chain of custody | *(planned)* |
+| `forensics/` | Deleted-file recovery, anti-forensic resistance, raw-disk analysis, chain-of-custody | 1 |
+| `incident-response/` | Triage workflows, evidence collection, SOC playbooks | *(planned)* |
 | `soc/` | Log analysis, SIEM exercises, detection rules | *(planned)* |
-| `hardening/` | Defensive configuration, network segmentation, posture audits | *(planned)* |
+| `hardening/` | Defensive configuration, network segmentation, security posture audits | *(planned)* |
 
 ---
 
@@ -72,10 +73,10 @@ Blue-team practice — forensics, incident response, detection engineering, SOC 
 
 ~~~
 cybersecurity-labs/
-├── README.md                                  # This file
+├── README.md                                     # This file
 ├── LICENSE
 │
-├── offensive-security/                        # 🔴 Red-team labs
+├── offensive-security/                           # 🔴 Red-team labs
 │   ├── README.md
 │   └── wireless/
 │       ├── README.md
@@ -83,11 +84,13 @@ cybersecurity-labs/
 │           ├── README.md
 │           └── WPA2_Handshake_Lab_Report.pdf
 │
-└── defensive-security/                        # 🔵 Blue-team labs (planned)
-    ├── forensics/
-    ├── incident-response/
-    ├── soc/
-    └── hardening/
+└── defensive-security/                           # 🔵 Blue-team labs
+    ├── README.md
+    └── forensics/
+        ├── README.md
+        └── linux-deleted-file-recovery/
+            ├── README.md
+            └── Linux_Forensics_Lab_Report.pdf
 ~~~
 
 ---
@@ -98,6 +101,7 @@ cybersecurity-labs/
 - **Forensic discipline by default.** Evidence hashed at capture time. Chain-of-custody documented. Timelines preserved.
 - **Defensive framing.** Every offensive finding ends with mitigation. Demonstrating an attack without proposing a defense is incomplete work.
 - **Honest reporting.** What worked, what failed, what got skipped — documented as-is. Inflated writeups serve no one.
+- **Negative findings are findings.** "No evidence recovered, methodology documented" is a defensible professional outcome — often the truthful one.
 
 ---
 
